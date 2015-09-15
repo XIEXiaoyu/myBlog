@@ -28,8 +28,19 @@ class PagesController extends Controller
     	// return view('pages.about', $data);
 
     	//Forth method:
-    	$first = 'Xie';
-    	$last = 'Jun';
-    	return view('pages.about', compact('first', 'last'));
+    	// $first = 'Xie';
+    	// $last = 'Jun';
+    	// return view('pages.about', compact('first', 'last'));
+
+        $people = [
+            'Taylor Otwell', 'Dayle Rees', 'Eric Barnes'
+        ];
+        
+        return view('pages.about', compact('people'));
+    }
+
+    public function contact()
+    {
+        return view('pages.contact');
     }
 }
